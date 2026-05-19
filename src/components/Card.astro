@@ -2,24 +2,29 @@
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@/utils/slugify";
 import { getEntryPath } from "@/utils/contentEntry";
+import { getReadingTime } from "@/utils/readingTime";
 import Datetime from "./Datetime.astro";
 import IconGallery from "@/assets/icons/IconGallery.svg";
+import IconClock from "@/assets/icons/IconClock.svg";
+import { SITE } from "@/config";
 
 type Props = {
   variant?: "h2" | "h3";
   featured?: boolean;
 } & (CollectionEntry<"blog"> | CollectionEntry<"galleries">);
 
-const { variant: Heading = "h2", featured = false, id, data, filePath, collection } = Astro.props;
+const { variant: Heading = "h2", featured = false, id, data, filePath, collection, body } = Astro.props;
 
 const { title, description, pubDatetime } = data;
 const modDatetime = "modDatetime" in data ? data.modDatetime : null;
 const timezone = "timezone" in data ? data.timezone : undefined;
+const tags = "tags" in data ? data.tags : [];
 const href = getEntryPath({ collection, id, filePath });
 const isGallery = collection === "galleries";
 const headingId = `${collection}-${slugifyStr(String(id))}-title`;
 const descriptionId = `${collection}-${slugifyStr(String(id))}-description`;
 const viewTransitionName = slugifyStr(String(title).replaceAll(".", "-"));
+const readingTime = body ? getReadingTime(body) : null;
 ---
 
 <li
@@ -99,14 +104,48 @@ const viewTransitionName = slugifyStr(String(title).replaceAll(".", "-"));
       <span class="absolute -inset-4 sm:-inset-5 z-10" aria-hidden="true"></span>
     </a>
     
-    <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} timezone={timezone} class="relative z-20 mt-1.5 pointer-events-none" />
-    
+    <!-- Meta row: date + reading time -->
+    <div class="relative z-20 mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 pointer-events-none">
+      <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} timezone={timezone} />
+      {readingTime && (
+        <span class="flex items-center gap-1 text-sm text-foreground/60 whitespace-nowrap">
+          <IconClock class="size-4 shrink-0" aria-hidden="true" />
+          {readingTime}
+        </span>
+      )}
+    </div>
+
     <p
       id={descriptionId}
       class="relative z-20 mt-2 line-clamp-2 text-sm leading-relaxed text-foreground/75 pointer-events-auto select-text"
     >
       {description}
     </p>
+
+    <!-- Tags -->
+    {SITE.showTagsInCards && tags.length > 0 && (
+      <ul class="relative z-20 mt-3 flex flex-wrap gap-1.5 pointer-events-auto">
+        {tags.slice(0, 4).map((tag: string) => (
+          <li>
+            <a
+              href={`/tags/${slugifyStr(tag)}/`}
+              class:list={[
+                "inline-flex items-center gap-0.5 rounded-full px-2.5 py-0.5",
+                "text-xs font-medium",
+                "border transition-colors duration-200",
+                isGallery
+                  ? "border-purple-500/25 bg-purple-500/8 text-purple-400/80 hover:border-purple-500/50 hover:bg-purple-500/15 hover:text-purple-400"
+                  : featured
+                    ? "border-amber-500/25 bg-amber-500/8 text-amber-500/80 hover:border-amber-500/50 hover:bg-amber-500/15 hover:text-amber-500"
+                    : "border-border/30 bg-muted/15 text-foreground/60 hover:border-accent/40 hover:bg-accent/10 hover:text-accent",
+              ]}
+            >
+              <span aria-hidden="true" class="opacity-60">#</span>{tag}
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
   </div>
 </li>
 

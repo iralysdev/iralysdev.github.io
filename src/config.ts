@@ -13,6 +13,7 @@ export const SITE = {
   showGalleries: true,
   showGalleriesInIndex: true, // Show galleries in the general paginated list (only if showGalleries is true)
   showBackButton: true, // show back button in post detail
+  showTagsInCards: true, // show tag pills at the bottom of post cards
   heroTerminalPrompt: {
     prefix: "~", // highlighted part on the left
     path: "/ready-to-go", // central prompt text

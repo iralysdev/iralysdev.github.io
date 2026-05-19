@@ -11,6 +11,7 @@ import BackToTopButton from "@/components/BackToTopButton.astro";
 import GalleryEmbed from "@/components/GalleryEmbed.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
+import { getReadingTime } from "@/utils/readingTime";
 import { SITE } from "@/config";
 
 type Props = {
@@ -34,6 +35,7 @@ const {
 } = post.data;
 
 const { Content } = await render(post);
+const readingTime = post.body ? getReadingTime(post.body) : null;
 
 let ogImageUrl: string | undefined;
 
@@ -164,6 +166,28 @@ const nextPost =
               class="opacity-70 [&>svg]:hidden"
             />
           </div>
+
+          <!-- Reading time chip -->
+          {readingTime && (
+            <div
+              class="inline-flex items-center gap-1.5 rounded-lg border border-border/25 bg-muted/10 px-2.5 py-1 backdrop-blur-sm"
+            >
+              <svg
+                class="size-3.5 text-accent/70"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                <path d="M12 7v5l3 3" />
+              </svg>
+              <span class="text-sm opacity-70">{readingTime}</span>
+            </div>
+          )}
 
           <!-- Edit post -->
           <EditPost
