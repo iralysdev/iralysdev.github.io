@@ -1,9 +1,9 @@
 export const SITE = {
   website: "https://devosfera.vercel.app/",
-  author: "Andrés Ujpán",
+  author: "Iralys Espinal",
   profile: process.env.PUBLIC_SOCIAL_GITHUB ?? "", // set in .env
-  desc: "A space where curiosity becomes code. Exploring web development, software architecture and everything that makes the tech world spin.",
-  title: "Astro Devosfera",
+  desc: "Un espacio de aprendizaje continuo enfocado en administración de sistemas, redes y resolución de problemas.",
+  title: "Laboratorio de Sistemas",
   ogImage: "devosfera-og.webp", // located in the public folder
   lightAndDarkMode: true,
   postPerIndex: 6,
