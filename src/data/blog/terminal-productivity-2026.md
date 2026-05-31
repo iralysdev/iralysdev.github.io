@@ -20,11 +20,10 @@ Implementación de un servidor de correo electrónico sobre Linux utilizando Pos
 
 Antes de instalar cualquier servicio, se actualizaron los repositorios de Ubuntu para garantizar que los paquetes descargados fueran las versiones más recientes disponibles.
 
-
+```bash
 sudo apt update
 sudo apt install postfix dovecot-imapd dovecot-pop3d mailutils
-
-
+```
 <figure>
   <img
     src="/Terminal.png"
