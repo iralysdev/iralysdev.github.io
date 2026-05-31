@@ -1,13 +1,13 @@
 ---
-title: "Terminal productivity: the tools that transformed my workflow"
-description: A tour of modern command-line tools that replace Unix classics — faster, smarter, and with better DX.
+title: "LABORATORIO: SERVIDOR DE CORREO LINUX (Postfix + Dovecot + SSL)"
+description: Configurar un servidor de correo en Linux con Postfix y Dovecot, permitiendo envío interno y externo de correos con seguridad SSL/TLS.
 pubDatetime: 2026-01-18T10:00:00Z
 tags:
-  - terminal
-  - productivity
+  - postfix
+  - dovecot
   - linux
-  - cli
-  - tools
+  - thunderbird
+  - virtualbox
 draft: false
 ---
 
@@ -15,21 +15,15 @@ The CLI ecosystem experienced a silent revolution. Tools written in Rust and Go 
 
 ## Table of contents
 
-## Shell: Zsh + Starship
+## Shell: Instalación de servicios
 
 [Starship](https://starship.rs) is undoubtedly the prompt that most improves the experience with the least effort. It works with any shell, is incredibly fast (written in Rust) and shows relevant context: Git branch, Node/Python/Rust version, last command status.
 
 ```toml file=~/.config/starship.toml
 # Minimalist but informative style
 format = """
-$directory\
-$git_branch\
-$git_status\
-$nodejs\
-$rust\
-$python\
-$cmd_duration\
-$line_break\
+sudo apt update
+sudo apt install postfix dovecot-imapd dovecot-pop3d mailutils
 $character"""
 
 [git_branch]
