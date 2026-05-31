@@ -46,7 +46,7 @@ format = "took [$duration](bold yellow)"
 
 <figure>
   <img
-    src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
+    src="/public/Terminal.png"
     alt="Abstract diagram of interconnected neural networks"
   />
   <figcaption class="text-center">
