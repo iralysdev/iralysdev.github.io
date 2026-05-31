@@ -1,5 +1,5 @@
 ---
-title: "LABORATORIO: SERVIDOR DE CORREO LINUX (Postfix + Dovecot + SSL)"
+title: "SERVIDOR DE CORREO LINUX (Postfix + Dovecot + SSL)"
 description: Configurar un servidor de correo en Linux con Postfix y Dovecot, permitiendo envío interno y externo de correos con seguridad SSL/TLS.
 pubDatetime: 2026-01-18T10:00:00Z
 tags:
@@ -11,19 +11,21 @@ tags:
 draft: false
 ---
 
-The CLI ecosystem experienced a silent revolution. Tools written in Rust and Go replaced decades-old Unix binaries, adding colors, syntax highlighting, fuzzy search, and Git-awareness with almost no sacrifice in speed. These are the ones I use daily.
+Implementación de un servidor de correo electrónico sobre Linux utilizando Postfix y Dovecot. El proyecto incluye la configuración de servicios SMTP e IMAP, gestión de usuarios locales, cifrado SSL/TLS y pruebas de comunicación entre cuentas para comprender el funcionamiento de una infraestructura de correo empresarial.
+
 
 ## Table of contents
 
 ## Shell: Instalación de servicios
 
-[Starship](https://starship.rs) is undoubtedly the prompt that most improves the experience with the least effort. It works with any shell, is incredibly fast (written in Rust) and shows relevant context: Git branch, Node/Python/Rust version, last command status.
+[Starship](https://starship.rs) Antes de instalar cualquier servicio, se actualizaron los repositorios de Ubuntu para garantizar que los paquetes descargados fueran las versiones más recientes disponibles.
 
 ```toml file=~/.config/starship.toml
 # Minimalist but informative style
 format = """
 sudo apt update
 sudo apt install postfix dovecot-imapd dovecot-pop3d mailutils
+
 $character"""
 
 [git_branch]
@@ -41,6 +43,24 @@ untracked = "?${count}"
 min_time = 2_000
 format = "took [$duration](bold yellow)"
 ```
+
+<figure>
+  <img
+    src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
+    alt="Abstract diagram of interconnected neural networks"
+  />
+  <figcaption class="text-center">
+    AI agents chain reasoning and action in autonomous loops.
+  </figcaption>
+</figure>
+
+
+
+
+
+
+
+
 
 ## Classic tool replacements
 
