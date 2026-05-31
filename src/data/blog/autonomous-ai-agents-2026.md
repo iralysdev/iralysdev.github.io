@@ -1,6 +1,6 @@
 ---
-title: "Autonomous AI Agents: the new way to build software in 2026"
-description: AI agents are no longer science fiction. We analyze their architecture, real use cases, and how to integrate them into your development workflow.
+title: "Prueba 2026"
+description: probado contenido
 pubDatetime: 2026-02-18T10:00:00Z
 tags:
   - ai
