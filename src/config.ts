@@ -25,11 +25,11 @@ export const SITE = {
     cursorGlow: false, // cursor tracking with soft halo
     grain: true, // background visual noise layer
   },
-  editPost: {
-    enabled: true,
+  /*editPost: {
+    enabled: false,
     text: "Edit this post",
     url: process.env.PUBLIC_EDIT_POST_URL ?? "", // set in .env
-  },
+  },*/
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"
   lang: "en", // html lang code. Set this empty and default will be "en"
