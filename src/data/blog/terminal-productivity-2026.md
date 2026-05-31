@@ -18,31 +18,12 @@ Implementación de un servidor de correo electrónico sobre Linux utilizando Pos
 
 ## Shell: Instalación de servicios
 
-[Starship](https://starship.rs) Antes de instalar cualquier servicio, se actualizaron los repositorios de Ubuntu para garantizar que los paquetes descargados fueran las versiones más recientes disponibles.
+Antes de instalar cualquier servicio, se actualizaron los repositorios de Ubuntu para garantizar que los paquetes descargados fueran las versiones más recientes disponibles.
 
-```toml file=~/.config/starship.toml
-# Minimalist but informative style
-format = """
+
 sudo apt update
 sudo apt install postfix dovecot-imapd dovecot-pop3d mailutils
 
-$character"""
-
-[git_branch]
-symbol = " "
-style = "bold purple"
-
-[git_status]
-conflicted = "⚔️ "
-ahead = "⇡${count}"
-behind = "⇣${count}"
-modified = "✎${count}"
-untracked = "?${count}"
-
-[cmd_duration]
-min_time = 2_000
-format = "took [$duration](bold yellow)"
-```
 
 <figure>
   <img
