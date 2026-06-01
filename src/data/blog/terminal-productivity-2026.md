@@ -71,6 +71,7 @@ sudo apt install postfix dovecot-imapd dovecot-pop3d -y
   </figcaption>
 </figure>
 
+
 <figure>
   <img
     src="/PostfixInstalado.png"
@@ -203,7 +204,7 @@ Se configuró Thunderbird como cliente de correo utilizando las credenciales de 
 
 <figure>
   <img
-    src="//Thunderbird5.png"
+    src="/Thunderbird5.png"
     alt="Actualizar paquetes de linux"
   />
   <figcaption class="text-center">
@@ -214,7 +215,7 @@ Se configuró Thunderbird como cliente de correo utilizando las credenciales de 
 
 <figure>
   <img
-    src="//Thunderbird6.png"
+    src="/Thunderbird6.png"
     alt="Actualizar paquetes de linux"
   />
   <figcaption class="text-center">
