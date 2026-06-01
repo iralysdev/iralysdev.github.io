@@ -48,7 +48,8 @@ export const SOCIALS: Social[] = (
     },
     {
       name: "Mail",
-      href: PUBLIC_SOCIAL_EMAIL ? `mailto:${PUBLIC_SOCIAL_EMAIL}` : "iralysespinal@gmail.com",
+      /*href: PUBLIC_SOCIAL_EMAIL ? `mailto:${PUBLIC_SOCIAL_EMAIL}` : "iralysespinal@gmail.com",*/
+      href: PUBLIC_SOCIAL_EMAIL ? `mailto:${PUBLIC_SOCIAL_EMAIL}`: "mailto:iralysespinal@gmail.com",
       linkTitle: `Send an email to ${SITE.title}`,
       icon: IconMail,
     },
