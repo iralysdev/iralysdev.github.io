@@ -74,7 +74,7 @@ sudo apt install postfix dovecot-imapd dovecot-pop3d -y
 
 <figure>
   <img
-    src="/PostfixInstalado.png"
+    src="/PostifxInstalado.png"
     alt="Instalacion terminada de Postfix"
   />
   <figcaption class="text-center">
