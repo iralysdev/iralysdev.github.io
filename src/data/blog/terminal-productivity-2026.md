@@ -64,10 +64,10 @@ sudo apt install postfix dovecot-imapd dovecot-pop3d -y
 <figure>
   <img
     src="/postInst3.png"
-    alt="Segunda Pantalla de Configuracion de Postifx"
+    alt="Tercera Pantalla de Configuracion de Postifx"
   />
   <figcaption class="text-center">
-    Segunda Pantalla de Instalacion de Postfix
+    Tercera Pantalla de Instalacion de Postfix
   </figcaption>
 </figure>
 
