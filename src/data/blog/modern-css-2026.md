@@ -7,7 +7,7 @@ tags:
   - frontend
   - design
   - web
-draft: false
+draft: true
 ---
 
 For years, the answer to "how do I do X in CSS?" was "use JavaScript". In 2026 that answer no longer applies in most cases. Three features in particular redrew the design map in the browser.

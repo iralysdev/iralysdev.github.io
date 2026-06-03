@@ -7,7 +7,7 @@ tags:
   - databases
   - backend
   - sql
-draft: false
+draft: true
 ---
 
 The question "SQL or NoSQL?" lost relevance when PostgreSQL acquired robust support for JSON documents. With `JSONB` you have strict schema where you need it and document flexibility where you need it, in the same database.

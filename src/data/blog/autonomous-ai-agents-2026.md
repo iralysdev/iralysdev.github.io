@@ -8,7 +8,7 @@ tags:
   - llm
   - python
 featured: true
-draft: false
+draft: true
 ---
 
 For years, AI assistants acted as oracles: you asked, they answered. In 2026 the paradigm changed. Now **autonomous agents** can plan, execute tools, evaluate results, and correct their own course without constant human intervention.

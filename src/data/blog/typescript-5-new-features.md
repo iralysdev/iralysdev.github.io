@@ -6,7 +6,7 @@ tags:
   - typescript
   - javascript
   - dev
-draft: false
+draft: true
 ---
 
 TypeScript continues to evolve at a rapid pace. The 5.x versions brought changes that go beyond performance improvements: they redefine patterns we have been using for years.

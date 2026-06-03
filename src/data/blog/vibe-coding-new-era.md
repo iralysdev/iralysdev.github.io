@@ -7,7 +7,7 @@ tags:
   - productivity
   - reflection
   - dev
-draft: false
+draft: true
 ---
 
 The term was coined by Andrej Karpathy in early 2025: _"Vibe coding is when you fully give in to the vibes, embrace exponentials, and forget that the code even exists."_ Two years later it is already part of the industry's vocabulary, although it is still misunderstood.

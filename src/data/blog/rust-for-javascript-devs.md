@@ -7,7 +7,7 @@ tags:
   - javascript
   - systems
   - webassembly
-draft: false
+draft: true
 ---
 
 Rust appeared on web developers' radars years ago, but adoption was slow. In 2026 the landscape changed: Rust powers critical tools in the JS ecosystem (Biome, Oxc, Rolldown, the SWC compiler) and WebAssembly makes it indispensable on the frontend. It's time to learn it.
