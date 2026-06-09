@@ -2,7 +2,7 @@
 title: "SERVIDOR DE CORREO LINUX (Postfix + Dovecot + SSL)"
 description: Configurar un servidor de correo en Linux con Postfix y Dovecot, permitiendo envío interno y externo de correos con seguridad SSL/TLS.
 pubDatetime: 2026-01-18T10:00:00Z
-ogImage: "/email.jpg"  
+ogImage: "/public/email.jpg"  
 tags:
   - postfix
   - dovecot
