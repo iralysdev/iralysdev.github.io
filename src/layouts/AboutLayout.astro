@@ -26,10 +26,7 @@ const { frontmatter } = Astro.props;
           <div class="avatar-glow"></div>
 
           <div class="avatar-inner">
-            <span class="avatar-emoji">
-            <img src=/CV2.png alt="Foto de perfil" class="avatar-image">
-            
-            </span>
+            <img src="/CV2.png" alt="Foto de perfil" class="avatar-image">
           </div>
         </div>
         <h1 class="hero-title">
@@ -238,8 +235,8 @@ const { frontmatter } = Astro.props;
   /* Avatar */
   .avatar-ring {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 160px;   /* antes: 110px — sube/baja este valor para cambiar el tamaño del círculo */
+    height: 160px;  /* antes: 110px — debe coincidir siempre con width */
     border-radius: 50%;
     padding: 3px;
     background: conic-gradient(
@@ -287,9 +284,27 @@ const { frontmatter } = Astro.props;
     }
   }
 
-  
+  .avatar-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden; /* necesario para que object-fit recorte dentro del círculo */
+    background: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: ring-spin 6s linear infinite reverse;
+  }
 
-  
+  /* La imagen rellena todo el círculo sin deformarse */
+  .avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* cambia a "top" si la cara queda cortada */
+    border-radius: 50%;
+    display: block;
+  }
 
   .hero-title {
     display: flex;
@@ -411,24 +426,4 @@ const { frontmatter } = Astro.props;
     border-radius: 999px;
     box-shadow: 0 0 8px color-mix(in srgb, var(--color-accent) 30%, transparent);
   }
-  .avatar-inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--color-background);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: ring-spin 6s linear infinite reverse;
-}
-
-.avatar-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-  display: block;
-}
 </style>
