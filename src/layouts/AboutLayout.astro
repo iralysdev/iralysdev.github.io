@@ -290,6 +290,7 @@ const { frontmatter } = Astro.props;
   .avatar-inner {
     width: 100%;
     height: 100%;
+    overflow: hidden; 
     border-radius: 50%;
     background: var(--color-background);
     display: flex;
@@ -432,11 +433,12 @@ const { frontmatter } = Astro.props;
   animation: ring-spin 6s linear infinite reverse;
 }
 
-.avatar img {
+.avatar-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* clave: rellena el círculo */
-  object-position: center;  /* o "top" si quieres encuadrar la cara */
+  object-fit: cover;
+  object-position: center;
   border-radius: 50%;
+  display: block;
 }
 </style>
