@@ -2,6 +2,7 @@
 title: "Prueba 2026"
 description: probado contenido
 pubDatetime: 2026-02-18T10:00:00Z
+ogImage: "/public/microsoft.jpg"
 tags:
   - ai
   - agents
