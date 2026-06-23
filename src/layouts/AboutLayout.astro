@@ -238,8 +238,8 @@ const { frontmatter } = Astro.props;
   /* Avatar */
   .avatar-ring {
     position: relative;
-    width: 110px;
-    height: 110px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     padding: 3px;
     background: conic-gradient(
@@ -432,10 +432,11 @@ const { frontmatter } = Astro.props;
   animation: ring-spin 6s linear infinite reverse;
 }
 
-.avatar-image {
+.avatar img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
+  object-fit: cover;   /* clave: rellena el círculo */
+  object-position: center;  /* o "top" si quieres encuadrar la cara */
+  border-radius: 50%;
 }
 </style>
