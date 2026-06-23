@@ -7,7 +7,7 @@ tags:
   - devops
   - containers
   - backend
-draft: true
+draft: false
 ---
 
 `docker-compose up` is the first command you learn. What comes next — networking, secrets, healthchecks, profiles for different environments — is what separates a functional configuration from a production-ready one.
