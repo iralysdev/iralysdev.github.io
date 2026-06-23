@@ -2,6 +2,7 @@
 title: "Docker Compose in 2026: best practices that actually matter"
 description: Beyond the basic docker-compose up. Production configs, secrets, healthchecks, profiles, and multi-stage builds that make a difference.
 pubDatetime: 2026-02-05T10:00:00Z
+ogImage: "/public/windows_server.jpg"
 tags:
   - docker
   - devops
